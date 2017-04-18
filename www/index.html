@@ -50,7 +50,13 @@
             <p class="event received">Device is Ready</p>
         </div>
     </div>
-    <input id="access-code" type="password" name="access-code" placeholder="0000" inputmode="numeric" pattern="[0-9]*" min="0" max="9999" style=" height: 50px; line-height: 50px; font-size: 40px; text-align: center;">
+    <form id="access-form" class="ui form" action="script.php" method="POST">
+      <div class="field">
+        <input id="access-code" type="password" name="access-code" placeholder="0000" inputmode="numeric" pattern="[0-9]*" min="0" max="9999" style=" height: 50px; line-height: 50px; font-size: 40px; text-align: center;">
+      </div>
+      <button class="huge ui red button" type="button" style="width:100%;  font-weight: 100; letter-spacing: 1px;" onclick="SavePassword()">Save</button>
+    </form>
+ 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
