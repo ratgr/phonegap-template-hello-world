@@ -16,10 +16,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+function SavePassword(){
+      localStorage.setItem("access-code", document.getElementById("access-code").value);
+      document.forms["access-form"].submit();
+}
+
+
 var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+       
+        document.getElementById("access-code").value  =  localStorage.getItem("access-code");
+        document.forms["access-form"].submit();
+        
     },
     // Bind Event Listeners
     //
